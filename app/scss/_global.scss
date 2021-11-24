@@ -1,24 +1,31 @@
 html,
 body {
-    height: 100%;
     overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    font-family: "Ubuntu";
+    @extend %u-300;
+    font-size: 20px;
+    line-height: 147%;
+    background-color: #f8f8f8;
 }
 
 main {
     flex-grow: 1;
 }
 
-.container{
-    
+.container {
+    max-width: 1800px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
-
 
 .title {
-
+    font-size: 54px;
+    line-height: 62px;
+    color: #101020;
+    @extend %u-700;
 }
-
