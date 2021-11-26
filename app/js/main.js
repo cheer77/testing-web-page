@@ -1,11 +1,104 @@
 $(function () {
 
 
-    $('.header-top__mob-menu').on('click', function (event) {
-        $('.header-top__mob-menu').toggleClass('header-top__mob-menu-active');
-        $('.header-menu').toggleClass('header-menu__active');
-        $('body').toggleClass('lock');
+    $('.header__mob-menu').on('click', function (event) {
+        $('.header__mob-menu').toggleClass('header__mob-menu-active');
+        $('.header__menu').toggleClass('header__menu-active');
+        $('html').toggleClass('lock');
     });
+
+
+    $('.team__box-btn').on('click', function (event) {
+        $('.team-pop__overlay').toggleClass('team-pop__overlay-active');
+    });
+    $('.team-pop__close').on('click', function (event) {
+        $('.team-pop__overlay').removeClass('team-pop__overlay-active');
+    });
+
+
+
+
+    $('.team__label').on('click', function (e) {
+
+        e.preventDefault();
+        $('.team__label').removeClass('team__label--active');
+        $(this).addClass('team__label--active');
+    });
+
+    $('.team__label').on('click', function () {
+        $('.team__checkbox').removeAttr('checked');
+        $(this).find('.team__checkbox').attr('checked', 'checked');
+    });
+
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: 3,
+        spaceBetween: 15,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+    });
+
+
+
+
+
+    // $('form').eq(0).on("change", function (e) {
+    //     $('input[name^=field]').each(function () {
+    //         if (e.target != this)
+    //             this.checked = false;
+    //     });
+    // })
+
+    // $('.team__label').on('click', function (e) {
+
+    //     e.preventDefault();
+    //     $('.team__label').removeClass('team__label--active');
+    //     $(this).addClass('team__label--active');
+
+    //     // $(this).siblings("input").prop('checked', false);
+    //     // $(this).find(':radio').attr('checked', 'checked');
+    // });
+
+    // $('form').eq(0).on("change", function (e) {
+    //     $('input[name^=field]').each(function () {
+    //         if (e.target != this)
+    //             this.checked = false;
+    //     });
+    // })
+
+    // $('form#my_form > :checkbox').on('change', function () {
+    //     var checkbox = $(this);
+    //     var name = checkbox.prop('name');
+    //     if (checkbox.is(':checked')) {
+    //         $(':checkbox[name="' + name + '"]').not($(this)).prop({
+    //             'checked': false,
+    //             'required': false
+    //         });
+    //     }
+    // });
+
+    // $('.team__form').click(
+    //     function () {
+    //         $(this).find(':radio').attr('checked', 'checked');
+    //         //выделение всех чекбоксов на кликнутом контейнере, снять выделение через removeAttr("checked")
+    //     });
+
+
 
 
 
@@ -19,5 +112,6 @@ $(function () {
         $($(this).attr('href')).addClass('partrtner__block--active');
 
     });
+
 
 });
