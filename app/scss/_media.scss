@@ -82,6 +82,11 @@
             margin-top: 40px;
         }
     }
+    .how {
+        &__bg {
+            max-width: 600px;
+        }
+    }
 }
 
 @media (max-width: 1087px) {
@@ -120,6 +125,29 @@
     .team {
         &__slider-box {
             top: 52px;
+        }
+    }
+    .how {
+        &__inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__descr {
+            max-width: 100%;
+            margin-right: 30px;
+            margin-bottom: 50px;
+        }
+        &__bg {
+            width: 100%;
+        }
+    }
+    .create {
+        &__wrapp {
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }
@@ -168,6 +196,10 @@
 
     .team {
         padding: 90px 0 130px;
+    }
+
+    .create {
+        padding: 90px 0px;
     }
 
     .footer {
@@ -781,6 +813,87 @@
             font-size: 16px;
             line-height: 18px;
             color: #b1b1b1;
+        }
+    }
+
+    .how {
+        &__inner {
+            padding: 60px 0 60px;
+        }
+        &__title {
+            margin: 0px 0 30px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 156%;
+            margin-top: 10px;
+            &:last-child {
+                margin-top: 0;
+            }
+        }
+        &__link {
+            display: inline-block;
+            margin-top: 40px;
+            font-size: 16px;
+            line-height: 147%;
+            padding-right: 34px;
+            &::after {
+                bottom: -5px;
+            }
+        }
+    }
+
+    .create {
+        padding: 50px 0px;
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__box {
+            padding: 10px;
+            min-height: auto;
+        }
+        &__img {
+            width: 33px;
+            margin-bottom: 15px;
+        }
+        &__img2 {
+            width: 26px;
+            margin-bottom: 15px;
+        }
+        &__img3 {
+            width: 30px;
+            margin-bottom: 15px;
+        }
+        &__img4 {
+            width: 32px;
+            margin-bottom: 15px;
+        }
+
+        &__wrapp2 {
+            display: none;
+        }
+        &__word {
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 137%;
+        }
+        &__link {
+            margin-top: 15px;
+            max-width: 109px;
+            font-size: 16px;
+            line-height: 147%;
+        }
+        &__more {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            text-decoration-line: underline;
+            font-size: 16px;
+            line-height: 147%;
         }
     }
 }
