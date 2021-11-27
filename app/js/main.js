@@ -31,25 +31,49 @@ $(function () {
     });
 
     const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        slidesPerView: 3,
-        spaceBetween: 15,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
+        centerSlidesBounds: true,
+        centerSlides: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
-        // And if we need scrollbar
         scrollbar: {
             el: '.swiper-scrollbar',
             draggable: true,
+        },
+        breakpoints: {
+            319: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1087: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1469: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1700: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
         },
     });
 

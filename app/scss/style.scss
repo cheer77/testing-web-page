@@ -286,6 +286,7 @@
             background-repeat: no-repeat;
             bottom: -160px;
             left: 35px;
+            z-index: 30;
         }
     }
 
@@ -315,9 +316,9 @@
         position: absolute;
         width: 780px;
         height: 343px;
-        background: linear-gradient(90deg, #f8f8f8 200%, rgba(321, 28, 298, 0) 107.87%);
+        background-color: #fff;
         top: 139px;
-        left: -311px;
+        left: -352px;
         z-index: 10;
         // background-color: inherit;
     }
@@ -379,14 +380,45 @@
         text-align: center;
         color: #000;
         cursor: pointer;
+        position: relative;
     }
     &__label--active {
         background: #ff0b53;
         color: #ffffff;
     }
+    &__label-text {
+        margin-left: 20px;
+    }
     &__checkbox {
-        margin-right: 15px;
-        pointer-events: none;
+        // margin-right: 15px;
+        // pointer-events: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+    &__check-style {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 13px;
+        border: 3px solid #000;
+        border-radius: 50%;
+    }
+    .team__label--active .team__check-style {
+        border: 3px solid #fff;
+    }
+    &__checkbox:checked + &__check-style::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        // transform: translate(-50%, 50%);
+        width: 13px;
+        height: 13px;
+        background-color: #fff;
+        border-radius: 50%;
     }
     &__checkbox--active {
         background: #ff0b53;
@@ -394,11 +426,13 @@
     }
 
     &__block {
+        width: 100%;
         max-width: 1300px;
     }
     &__slider {
-        // width: 100%;
+        width: 100%;
         margin-top: 71px;
+        // max-width: 1200px;
     }
     &__slider-slide {
         position: relative;
@@ -417,6 +451,8 @@
     &__slide-inner {
         position: relative;
         transition: all 0.5s;
+        max-width: 430px;
+        width: 100%;
         &::before {
             content: "";
             position: absolute;
@@ -854,6 +890,13 @@
     &__soc {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__soc-privacy {
+        font-size: 18px;
+        line-height: 21px;
+        color: #b1b1b1;
     }
 }
 
